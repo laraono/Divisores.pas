@@ -1,17 +1,19 @@
 Program DIVISORES;
 VAR NL, DV, MULT : INTEGER;
 Begin
-	WRITELN('ENCONTRE OS DIVISORES DE UM N�MERO!');
+	WRITELN('ENCONTRE OS DIVISORES DE UM NÚMERO!');
 	REPEAT
-		WRITELN('DIGITE O N�MERO OU ENCERRE DIGITANDO ''0''(ZERO)');
-		READLN(NL);
-		IF (NL <> 0) THEN
+		// Leitura do número
+		WRITELN('DIGITE O NÚMERO OU ENCERRE DIGITANDO ''0''(ZERO)');
+		READLN(NL); 
+		IF (NL <> 0) THEN // Encerra se número lido for zero
 			BEGIN	
-      	WRITELN('N�MERO LIDO = ', Nl);
+      	WRITELN('NÚMERO LIDO = ', Nl);
       	WRITELN('DIVISORES');
       	MULT := 1;
+	// Calculo divisores
 				IF(NL < 0) THEN
-					MULT := -1;
+					MULT := -1; // Considera números negativos
 				NL := NL * MULT;
 				FOR DV := 1 TO NL DO
 					BEGIN                
